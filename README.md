@@ -1,10 +1,10 @@
-# @foxglove/wasm-zstd
+# @lichtblick/wasm-zstd
 
 https://github.com/facebook/zstd compiled to WebAssembly and exposed as a high-level TypeScript/JavaScript API . PRs welcome!
 
 ## API
 
-`@foxglove/wasm-zstd` exports:
+`@lichtblick/wasm-zstd` exports:
 
 ```typescript
 export const isLoaded: Promise<boolean>;
@@ -17,7 +17,7 @@ Here is an example of compressing then decompressing with this library:
 
 ```js
 import fs from "fs/promises";
-import zstd from "@foxglove/wasm-zstd";
+import zstd from "@lichtblick/wasm-zstd";
 
 async function main() {
   const inputData = await fs.readFile("input.txt");
@@ -51,14 +51,10 @@ Emscripten compiled WebAssembly modules are built in 2 parts: a `.js` side and a
 
 ## License
 
-@foxglove/wasm-zstd is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+@lichtblick/wasm-zstd is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Releasing
 
 1. Run `yarn version --[major|minor|patch]` to bump version
 2. Run `git push && git push --tags` to push new tag
 3. GitHub Actions will take care of the rest
-
-## Stay in touch
-
-Join our [Slack channel](https://foxglove.dev/slack) to ask questions, share feedback, and stay up to date on what our team is working on.
